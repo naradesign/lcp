@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LCP - Demo 1</title>
+    <title>LCP - Demo 2</title>
     <style>
         img {
             max-width: 100%;
             height: auto;
         }
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap">
-    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="index.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="image" href="//naradesign.github.io/html5/img/large.jpg">
 </head>
 <body>
     <h1>LCP 문제 해결하기</h1>
