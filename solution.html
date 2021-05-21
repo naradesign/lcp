@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" as="style" href="noto-sans-kr.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" as="image" href="https://naradesign.github.io/html5/img/small.avif">
+    <link rel="preload" as="image" media="(max-width:640px)" href="https://naradesign.github.io/html5/img/small.avif">
+    <link rel="preload" as="image" media="(min-width:641px)" href="https://naradesign.github.io/html5/img/large.avif">
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; }
         picture,
@@ -27,7 +28,13 @@
         <source srcset="https://naradesign.github.io/html5/img/large.avif" type="image/avif">
         <source srcset="https://naradesign.github.io/html5/img/small.webp" type="image/webp" media="(max-width:640px)">
         <source srcset="https://naradesign.github.io/html5/img/large.webp" type="image/webp">
-        <img src="https://naradesign.github.io/html5/img/small.jpg" alt>
+        <img src="https://naradesign.github.io/html5/img/small.jpg" decoding="async" alt>
+    </picture>
+    <p style="height:4800px;text-align:center;background:linear-gradient(#ddd 48px, transparent 48px) 0 0/100vw 96px repeat-y">이 상자는 두 번째 이미지의 지연 로딩을 테스트하기 위한 자리 표시자이다. 개발자 도구의 네트워크 탭을 열고 웹 문서를 스크롤하여 두 번째 이미지의 로딩 순간을 확인해 보자.</p>
+    <picture>
+        <source srcset="https://naradesign.github.io/html5/img/example.avif" type="image/avif">
+        <source srcset="https://naradesign.github.io/html5/img/example.webp" type="image/webp">
+        <img src="https://naradesign.github.io/html5/img/example.jpg" loading="lazy" decoding="async" alt>
     </picture>
 </body>
 </html>

@@ -20,10 +20,13 @@
     <h1>LCP 문제 해결하기</h1>
     <p>이 페이지는 웹 사이트의 <a href="//web.dev/lcp/">LCP(Largest Contentful Paint)</a> 문제를 유발하는 큰 이미지를 포함하고 있다. 구글 크롬 <a href="//developers.google.com/web/tools/lighthouse">라이트하우스</a> 또는 <a href="//developers.google.com/speed/pagespeed/insights/?hl=ko">페이지 스피드 인사이트</a>를 통해 LCP 문제를 확인하고 개선해 보자. 이 문제를 해결하면 검색 엔진 최적화에 도움이 된다.</p>
     <img src alt>
+    <p style="height:4800px;text-align:center;background:linear-gradient(#ddd 48px, transparent 48px) 0 0/100vw 96px repeat-y">...</p>
+    <img src alt>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
         jQuery(function($){
             $('img').eq(0).attr('src', 'https://naradesign.github.io/html5/img/large.jpg')
+            $('img').eq(1).attr('src', 'https://naradesign.github.io/html5/img/example.jpg')
         })
     </script>
 </body>
