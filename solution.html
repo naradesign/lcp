@@ -11,29 +11,34 @@
     <link rel="preload" as="image" media="(min-width:641px)" href="https://naradesign.github.io/html5/img/large.avif">
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; }
-        picture,
-        img {
+        .picture,
+        .img {
             display: block;
             max-width: 100%;
             height: auto;
+        }
+        .space {
+            height: 300vh;
+            text-align:center;
+            background:linear-gradient(#ddd 100vh, transparent 100vh) 0 0 / 100vw 200vh repeat-y
         }
     </style>
 </head>
 <body>
     <h1>LCP 문제 해결하기</h1>
     <p>이 페이지는 웹 사이트의 <a href="//web.dev/lcp/">LCP(Largest Contentful Paint)</a> 문제를 유발하는 큰 이미지를 포함하고 있다. 구글 크롬 <a href="//developers.google.com/web/tools/lighthouse">라이트하우스</a> 또는 <a href="//developers.google.com/speed/pagespeed/insights/?hl=ko">페이지 스피드 인사이트</a>를 통해 LCP 문제를 확인하고 개선해 보자. 이 문제를 해결하면 검색 엔진 최적화에 도움이 된다.</p>
-    <picture>
+    <picture class="picture">
         <source srcset="https://naradesign.github.io/html5/img/small.avif" type="image/avif" media="(max-width:640px)">
         <source srcset="https://naradesign.github.io/html5/img/large.avif" type="image/avif">
         <source srcset="https://naradesign.github.io/html5/img/small.webp" type="image/webp" media="(max-width:640px)">
         <source srcset="https://naradesign.github.io/html5/img/large.webp" type="image/webp">
-        <img src="https://naradesign.github.io/html5/img/small.jpg" decoding="async" alt>
+        <img class="img" src="https://naradesign.github.io/html5/img/small.jpg" decoding="async" alt>
     </picture>
-    <p style="height:4800px;text-align:center;background:linear-gradient(#ddd 48px, transparent 48px) 0 0/100vw 96px repeat-y">이 상자는 두 번째 이미지의 지연 로딩을 테스트하기 위한 자리 표시자이다. 개발자 도구의 네트워크 탭을 열고 웹 문서를 스크롤하여 두 번째 이미지의 로딩 순간을 확인해 보자.</p>
-    <picture>
+    <p class="space">이 상자는 두 번째 이미지의 지연 로딩을 테스트하기 위한 100vh 크기의 자리 표시자이다. 개발자 도구의 네트워크 탭을 열고 웹 문서를 스크롤하여 두 번째 이미지의 로딩 순간을 확인해 보자.</p>
+    <picture class="picture">
         <source srcset="https://naradesign.github.io/html5/img/example.avif" type="image/avif">
         <source srcset="https://naradesign.github.io/html5/img/example.webp" type="image/webp">
-        <img src="https://naradesign.github.io/html5/img/example.jpg" loading="lazy" decoding="async" alt>
+        <img class="img" src="https://naradesign.github.io/html5/img/example.jpg" loading="lazy" decoding="async" alt>
     </picture>
 </body>
 </html>
