@@ -1,4 +1,5 @@
 # index.html 파일 LCP 개선하기
+* https://naradesign.github.io/lcp/
 
 ## LCP 개선 포인트.
 * 서드 파티 라이브러리(jquery, lodash, normalize...) 줄이기.
